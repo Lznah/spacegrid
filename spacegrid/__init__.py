@@ -1,1 +1,1 @@
-from .spacegrid import escape_routes, route
+from .spacegrid import escape_routes
