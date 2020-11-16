@@ -1,4 +1,5 @@
 import numpy as np
+import numbers
 
 LEFT=b'<'
 RIGHT=b">"
@@ -152,7 +153,7 @@ class Spacegrid:
         self.safe_factor = self._compute_safe_factor()
                     
     def route(self, row, column):
-        if not isinstance(row, int) or not isinstance(column, int):
+        if not isinstance(row, numbers.Integral) or not isinstance(column, numbers.Integral):
             raise IndexError
 
         if row < 0 or row > self.rows or column < 0 or column > self.cols:
